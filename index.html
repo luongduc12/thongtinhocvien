@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Thông tin học viên</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Dosis:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <noscript>
+            Bạn cần bật JavaScript để chạy chương trình này!
+        </noscript>
+        <div id="root">
+            <div class="container">
+                <div class="card">
+                    <div class="card-avatar">
+                        <p class="card-info" id="display-card-avatar"></p>
+                    </div>
+                    <div class="card-name">
+                        <p class="card-label">Họ và tên / Full name:</p>
+                        <p class="card-info" id="display-card-name">NGUYỄN VĂN A</p>
+                    </div>
+                    <div class="card-dob">
+                        <p class="card-label">Ngày sinh / Date of birth:</p>
+                        <p class="card-info" id="display-card-dob">dd/mm/yyyy</p>
+                    </div>
+                    <div class="card-sex">
+                        <p class="card-label">Giới tính / Sex:</p>
+                        <p class="card-info" id="display-card-sex">Nam/Nữ</p>
+                    </div>
+                    <div class="card-class">
+                        <p class="card-label">Đơn vị / Class:</p>
+                        <p class="card-class" id="display-card-class">A1.B2.D55</p>
+                    </div>
+                    <div class="card-phone">
+                        <p class="card-label">Số điện thoại / Phone number:</p>
+                        <p class="card-info" id="display-card-phone">0123456789</p>
+                    </div>
+                    <div class="card-email">
+                        <p class="card-label">Email:</p>
+                        <p class="card-info" id="display-card-email">example@mail.com</p>
+                    </div>
+                    <div class="card-address">
+                        <p class="card-label">Quê quán / Place of origin:</p>
+                        <p class="card-info" id="display-card-address">Phường X, Quận Y, Thành phố Z</p>
+                    </div>
+                    <div class="notification hidden" id="notification">
+                        <p id="notification-text"></p>
+                        <div class="progress-bar"></div>
+                    </div>
+                    
+                </div>
+                
+                <div class="form">
+                    <form id="info-form">
+                        <h2>Thông tin học viên</h2>
+                        <div class="form-group">
+                            <div class="form-inline1">
+                                <div class="form-half11">
+                                    <label>Họ và tên:</label>
+                                    <input type="text" id="card-name" maxlength="30" placeholder="Nguyễn Văn A" value="">
+                                </div>
+                                <div class="form-half12">
+                                    <input type="file" id="card-avatar" name="avatar" accept=".jpg, .jpeg, .png" style="display: none;">
+                                    <label for="card-avatar" id="card-avatar"><i class="fa fa-picture-o" aria-hidden="true"></i></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <div class="form-inline2">
+                                <div class="form-half21">
+                                    <label>Đơn vị:</label>
+                                    <input type="text" id="card-class" maxlength="13" placeholder="A1.B2.D55" value="">
+                                </div>
+                                <div class="form-half22">
+                                    <label for="phone">Số điện thoại:</label>
+                                    <input type="tel" id="card-phone" maxlength="10" placeholder="0123456789" value="">
+                                </div>
+                            </div>
+                        </div> 
+                        
+                        <div class="form-group">
+                            <div class="form-inline3">
+                                <div class="form-half31">
+                                    <label for="sex">Giới tính:</label>
+                                    <select type="sex" id="card-sex">
+                                        <option value="">(chưa chọn)</option>
+                                        <option value="Nam">Nam</option>
+                                        <option value="Nữ">Nữ</option>
+                                        <option value="Khác">Khác</option>
+                                    </select>
+                                </div>
+                                <div class="form-half32">
+                                    <label for="dob">Ngày sinh:</label>
+                                    <input type="date" id="card-dob">
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="card-email" placeholder="example@mail.com" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Quê quán:</label>
+                            <input type="text" id="card-address" maxlength="40" placeholder="Phường X, Quận Y, Thành phố Z">
+                        </div>
+
+                        <button type="submit" class="submit">Xác nhận</button>
+                        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>    
+        <script src="script.js"></script>
+    </body>
+</html>
